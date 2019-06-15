@@ -1,0 +1,42 @@
+table {
+    margin: auto;
+    width: 100%;
+    background:rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  ng-container{
+      color:white;
+      font-size: 15px;
+  }
+
+  th{
+      color:white;
+      font-size: 15px;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    color:white;
+  }
+  td{
+      color:white;
+      font-size: 15px;
+  }
+
+  button{
+      background-color: transparent;
+      font-size: 15px;
+  }
+  
+mat-paginator, span, select, mat-select-value{
+    background:rgba(255,255,255,0.1);
+    color: white;
+    font-size: 15px;
+}
+
+
+
+  .mat-column-select {
+    overflow: initial;
+  }

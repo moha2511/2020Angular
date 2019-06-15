@@ -1,0 +1,41 @@
+input{
+    width: 100%;
+    border-color: black; 
+    color:white;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    margin: auto;
+    
+  }
+
+  h3 {
+    font-style: normal;
+    font-family: "Courier New", Courier, monospac;
+    color: white;
+    position: absolute;
+    top: 40;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+  textarea{
+      background: transparent;
+      width: 100%;
+      color: white;
+      border-bottom: 1px solid white;
+  }
+  ::placeholder{
+      color: white;
+  }
+
+  #newsContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+
+  

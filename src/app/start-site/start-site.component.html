@@ -1,0 +1,90 @@
+<div class="siteContainer">
+
+<!--
+<div id="searchSection" class="section">
+    <h3> Genforeningen 2020</h3>
+    <p> Hvad er genforenignen 2020</p>
+    <mat-form-field style="color: white; border-color: white" id="field" >
+        <mat-label style="color: white; font-size: 20px">Find arrangementer tæt på dig</mat-label>
+        <input style="color: white; border-color:white;" matInput placeholder="By / Postnummer">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint style="color: white;">by / postnummer</mat-hint>
+      </mat-form-field>
+</div>
+-->
+  <div id="firstSection" class="section">
+    <div id="firstSectionContent" class="sectionContent">
+      <h1 id="firstSectionHeader"> Genforeningen 2020</h1>
+      <h3> Sønderborg Kommune</h3>
+      <p id="firstSectionText"> I 2020 er det 100 år siden, at Sønderjylland blev genforenet med Danmark.
+        Jubilæumsåret vil blive markeret med events og aktiviteter over hele landet.
+        Dit arrangement kan også blive en del af programmet og være med til at skabe en værdig,
+        festlig og synlig markering af jubilæet. 
+        Vi ønsker at samle et attraktivt,
+        synligt og sammenhængende program af berigende oplevelser i hele Danmark både lokalt,
+        regionalt og nationalt. Jubilæumsåret begynder officielt med et åbningsarrangement 10. januar 2020 i København.
+        Også dagene for de to afstemninger i februar og marts vil få en særlig plads i programmet.
+      </p>
+      <button #section1 id="læsMereBtn" (click)="onReadMore(section2)"> Læs Mere </button>
+      <ul>
+        <li>
+          <a mat-button
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgenforeningen2020.dk%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore" class="fb-xfbml-parse-ignore" class="fb-xfbml-parse-ignore"
+            class="fb-xfbml-parse-ignore"> <i class="fa fa-facebook-square" style="font-size:24px"></i></a>
+        </li>
+        <li>
+          <a mat-button href="https://twitter.com/intent/tweet?text=https://genforeningen2020.dk"> <i
+              class="fa fa-twitter-square" style="font-size:24px"></i></a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div #section2 id="secondSection" class="section">
+  <div id="SecondSectionContent" class="sectionContent">
+    <h3> Oplevelser over hele landet</h3>
+    <p id="firstSectionText">
+      Begivenhederne kulminerer 10.-12. juli 2020. Her markerer vi 100-året for de historiske dage i 1920,
+      hvor Kong Christian 10. red over grænsen til Sønderjylland, der nu var genforenet med Danmark.
+      Formålet med Genforeningen 2020 er at styrke bevidstheden om genforeningens skelsættende politiske
+      og kulturelle betydning for hele det danske samfund, for vores nationale selvforståelse og for venskabet til
+      Tyskland.
+      Ambitionen er også at øge kendskabet til det historiske forløb, hvor Sønderjylland blev en del af Danmark og sætte
+      fokus på det europæiske perspektiv i det dansk-tyske grænseland. Samtidig skal markeringen bidrage til en positiv
+      og nutidig profilering af det sydlige Danmark.I 2020 fejrer vi også det gode naboskab til Tyskland,
+      og året er udpeget til dansk-tysk venskabsår.
+    </p>
+    <ul>
+      <li>
+        <a mat-button routerLink="/allEvents"> Se Arrangementer </a>
+      </li>
+      <li>
+        <a mat-button routerLink="/create"> Tilmed Arrangement </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<form [formGroup]="emailFormGroup"class="section" >
+<h3> Tilmed dig vores nyhedsbrev</h3>
+<p>Få at vide når ny arrangementer bliver publiceret og andet relevant nyt</p>
+
+<input #emailInput placeholder="E-Mail" formControlName="emailCtrl">
+<div>
+<mat-error *ngIf=" isSubmitted && emailFormGroup.get('emailCtrl').hasError('required')">Skriv din email for at tilmelde dig nyhedsbrevet </mat-error>
+<mat-error *ngIf=" isSubmitted && emailFormGroup.get('emailCtrl').hasError('email')">Ugyldig E-mail </mat-error>
+<div>
+  <button (click)="onSendNewsMail(emailInput)" type="button" mat-button> Tilmeld</button>
+  </div>
+</div>
+<ngb-alert id="SuccessMessage" *ngIf=" message && !message.isErrorMessage" #alert [dismissible]="false">
+  <strong>{{message.message}}</strong>
+</ngb-alert>
+
+<ngb-alert id="errorMessage" *ngIf=" message && message.isErrorMessage" #alert [dismissible]="false">
+  <strong>{{message.message}}</strong>
+</ngb-alert>
+</form>

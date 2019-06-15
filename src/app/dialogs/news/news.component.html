@@ -1,0 +1,26 @@
+
+<h3> Skriv din nyhed her </h3>
+<div id="newsContainer">
+<form [formGroup]="newsForm" >
+
+    <div>
+            <input placeholder="Overskrift" #subjectInput matInput formControlName="subjectCtrl" required>
+            <div>
+            <textarea placeholder="Skriv teskten her" #textInput matInput rows="15" formControlName="textCtrl" required></textarea>
+        </div>
+    </div>
+
+</form>
+<div>
+        <button #send  (click)="onSend(textInput,subjectInput)"> Send</button>
+    </div>
+</div>
+
+
+<ngb-alert id="SuccessMessage" *ngIf=" message && !message.isErrorMessage" #alert [dismissible]="false">
+        <strong>{{message.message}}</strong>
+      </ngb-alert>
+      
+      <ngb-alert id="errorMessage" *ngIf=" message && message.isErrorMessage" #alert [dismissible]="false">
+        <strong>{{message.message}}</strong>
+      </ngb-alert>

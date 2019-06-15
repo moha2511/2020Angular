@@ -1,0 +1,14 @@
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-right: 1rem;
+}
+
+li{
+list-style-type: none;
+text-decoration: none;
+}
+
+.data{
+    float: right;
+}

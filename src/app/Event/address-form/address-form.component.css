@@ -1,0 +1,42 @@
+
+mat-card {
+    margin: auto;
+    width: 85%;
+    margin-top: 1rem;
+    background: transparent;
+    transition: none !important;
+    box-shadow: none !important;
+
+}
+
+
+mat-horizontal-stepper{
+  background: transparent;
+}
+
+mat-step{
+  background: transparent;
+}
+
+form{
+  background: transparent;
+}
+
+ng-template{
+  background: transparent;
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+  }
+  
+  .image-preview img {
+    height: 100%;
+  }
+
+  mat-form-field{
+    width: 100%;
+    background: transparent;
+
+}

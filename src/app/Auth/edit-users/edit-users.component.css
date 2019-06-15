@@ -1,0 +1,49 @@
+table {
+    margin: auto;
+    width: 100%;
+    background:rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  ng-container{
+      color:white;
+      font-size: 15px;
+  }
+
+  th{
+      color:white;
+      font-size: 15px;
+  }
+
+  td{
+      color:white;
+      font-size: 15px;
+  }
+
+  button{
+      background-color: transparent;
+      font-size: 15px;
+  }
+  
+#deleteIcon{
+    color:red;
+
+}
+#newPasswordIcon{
+    color:rgb(61, 255, 61);
+
+}
+
+mat-paginator, span, select, mat-select-value{
+    background:rgba(255,255,255,0.1);
+    color: white;
+    font-size: 15px;
+}
+
+  :host /deep/ .mat-select-value-text {
+    color: white !important;
+  }
+
+  :host /deep/ .mat-select-arrow {
+    color: white !important;
+  }

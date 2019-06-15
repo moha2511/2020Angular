@@ -1,0 +1,60 @@
+mat-card {
+  margin: auto;
+  width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-bottom: 1rem;
+}
+
+mat-card-title,
+mat-card-subtitle,
+mat-card-header {
+  color: white;
+}
+
+.mat-expansion-indicator::after {
+  color: white;
+}
+
+#cost {
+  margin-left:1rem;
+}
+mat-expansion-panel,
+mat-expansion-panel-header {
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+}
+
+mat-expansion-panel-header :hover {
+  color: rgb(221, 209, 253);
+}
+
+mat-spinner {
+  margin: auto;
+}
+button:hover {
+  color: rgb(221, 209, 253);
+}
+
+rrorMessage {
+  background-color: rgb(255, 153, 153);
+  color: rgb(255, 255, 255);
+}
+
+#successMessage {
+  background-color: royalblue;
+  color: white;
+  top: 0;
+}
+
+#endButton {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: white;
+}
+
+/deep/ .mat-expansion-indicator::after, .mat-expansion-panel-header-description { color: white;}
+

@@ -1,0 +1,77 @@
+<div>
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+      
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="Navn">
+      <th mat-header-cell *matHeaderCellDef> Navn </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+ 
+    <!-- E-mail Column -->
+    <ng-container matColumnDef="Addresse">
+      <th mat-header-cell *matHeaderCellDef> addresse </th>
+      <td mat-cell *matCellDef="let element"> {{element.address.line}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="By">
+      <th mat-header-cell *matHeaderCellDef> by </th>
+      <td mat-cell *matCellDef="let element"> {{element.address.city}} </td>
+    </ng-container>
+
+     <!-- E-mail Column -->
+     <ng-container matColumnDef="Kategori">
+      <th mat-header-cell *matHeaderCellDef> kategori </th>
+      <td mat-cell *matCellDef="let element"> {{element.theme}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Start Tid">
+      <th mat-header-cell *matHeaderCellDef> start tid </th>
+      <td mat-cell *matCellDef="let element"> {{element.startTime}} </td>
+    </ng-container>
+
+    
+    <!-- E-mail Column -->
+    <ng-container matColumnDef="Slut Tid">
+      <th mat-header-cell *matHeaderCellDef> slut tid </th>
+      <td mat-cell *matCellDef="let element"> {{element.endTime}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Pris">
+      <th mat-header-cell *matHeaderCellDef> pris </th>
+      <td mat-cell *matCellDef="let element"> {{element.cost}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Alder">
+      <th mat-header-cell *matHeaderCellDef>  alder </th>
+      <td mat-cell *matCellDef="let element"> {{element.ageLimit}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="select">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-checkbox (change)="$event ? masterToggle() : null"
+                        [checked]="selection.hasValue() && isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()">
+          </mat-checkbox>
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox (click)="$event.stopPropagation()"
+                        (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+  
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator (change)="onChangedPage($event)" [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>
+  </div>
+  
+  
+  

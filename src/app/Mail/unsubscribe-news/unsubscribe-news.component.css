@@ -1,0 +1,67 @@
+
+  
+  mat-input {
+    color:white;
+  }
+  
+  input{
+    width: 50%;
+    border-color: white; 
+    color:white;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    
+  }
+  
+  mat-form-field{
+    margin: auto;
+    width: 80%;
+    color:white;
+    text-align: center;
+  }
+
+  h3 {
+    font-style: normal;
+    font-family: "Courier New", Courier, monospac;
+    color: white;
+  }
+  
+
+  button , a {
+    font-size: 18px;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+    font-family: "Courier New", Courier, monospac;
+  }
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+  button:hover {
+    color: royalblue;
+  }
+  a:hover{
+      color: royalblue;
+      text-decoration: none;
+  }
+  
+  #errorMessage{
+    background-color: rgb(255, 153, 153);
+    color: rgb(255, 255, 255);  
+  
+  }
+  
+  #successMessage{
+    background-color: rgb(196, 255, 196);
+    color: white;
+  
+  }

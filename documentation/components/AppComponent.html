@@ -1,0 +1,982 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>adam-bozhi-proj documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">adam-bozhi-proj documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AppComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/app.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-root</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./app.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./app.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#authListenerSubs">authListenerSubs</a>
+                            </li>
+                            <li>
+                                <a href="#isHandset$">isHandset$</a>
+                            </li>
+                            <li>
+                                <a href="#isLoading">isLoading</a>
+                            </li>
+                            <li>
+                                <a href="#sidenav">sidenav</a>
+                            </li>
+                            <li>
+                                <a href="#userIsAuthenticated">userIsAuthenticated</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onLogout">onLogout</a>
+                            </li>
+                            <li>
+                                <a href="#onRequestedEvents">onRequestedEvents</a>
+                            </li>
+                            <li>
+                                <a href="#toggleSidenav">toggleSidenav</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(authService: <a href="../injectables/AuthenticateService.html">AuthenticateService</a>, breakpointObserver: BreakpointObserver, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthenticateService.html" target="_self" >AuthenticateService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breakpointObserver</td>
+                                                  
+                                                        <td>
+                                                                    <code>BreakpointObserver</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/app.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/app.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLogout"></a>
+                    <span class="name">
+                        <b>
+                            onLogout
+                        </b>
+                        <a href="#onLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onLogout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/app.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRequestedEvents"></a>
+                    <span class="name">
+                        <b>
+                            onRequestedEvents
+                        </b>
+                        <a href="#onRequestedEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onRequestedEvents()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/app.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleSidenav"></a>
+                    <span class="name">
+                        <b>
+                            toggleSidenav
+                        </b>
+                        <a href="#toggleSidenav"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleSidenav()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/app.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="authListenerSubs"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            authListenerSubs</b>
+                            <a href="#authListenerSubs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/app.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isHandset$"></a>
+                        <span class="name">
+                            <b>
+                            isHandset$</b>
+                            <a href="#isHandset$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result &#x3D;&gt; result.matches)
+  )</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/app.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoading"></a>
+                        <span class="name">
+                            <b>
+                            isLoading</b>
+                            <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/app.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidenav"></a>
+                        <span class="name">
+                            <b>
+                            sidenav</b>
+                            <a href="#sidenav"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatSidenav</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;drawer&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/app.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userIsAuthenticated"></a>
+                        <span class="name">
+                            <b>
+                            userIsAuthenticated</b>
+                            <a href="#userIsAuthenticated"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/app.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { AuthenticateService } from &#x27;./Auth/Authenticate.service&#x27;;
+import { Observable, Subscription } from &#x27;rxjs&#x27;;
+import { Breakpoints, BreakpointObserver } from &#x27;@angular/cdk/layout&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { MatSidenav } from &#x27;@angular/material&#x27;;
+import { THIS_EXPR } from &#x27;@angular/compiler/src/output/output_ast&#x27;;
+
+@Component({
+  selector: &#x27;app-root&#x27;,
+  templateUrl: &#x27;./app.component.html&#x27;,
+  styleUrls: [&#x27;./app.component.css&#x27;]
+})
+export class AppComponent implements OnInit, OnDestroy {
+  userIsAuthenticated &#x3D; false;
+  private authListenerSubs: Subscription;
+  @ViewChild(&#x27;drawer&#x27;) sidenav: MatSidenav;
+  isLoading;
+
+
+  isHandset$: Observable&lt;boolean&gt; &#x3D; this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result &#x3D;&gt; result.matches)
+  );
+
+  constructor(private authService: AuthenticateService, private breakpointObserver: BreakpointObserver, private router: Router) {}
+  ngOnInit() {
+    this.authService.authenticateAutomatically();
+    this.userIsAuthenticated &#x3D; this.authService.getIsAuthenticated();
+    this.authListenerSubs &#x3D; this.authService.getAuthStatusListener().subscribe(isAutheticated &#x3D;&gt; {
+    this.userIsAuthenticated &#x3D; isAutheticated;
+  });
+
+}
+
+onRequestedEvents() {
+  this.isLoading &#x3D; true;
+  this.router.navigate([&#x27;requestedEvents/true&#x27;]);
+  this.isLoading &#x3D; false;
+}
+
+onLogout() {
+  this.isLoading &#x3D; true;
+  this.authService.logout();
+  this.isLoading &#x3D; false;
+}
+ngOnDestroy() {
+  this.authListenerSubs.unsubscribe();
+}
+
+toggleSidenav() {
+  this.sidenav.toggle();
+}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-spinner *ngIf&#x3D;&quot;isLoading&quot;&gt;&lt;/mat-spinner&gt;
+&lt;mat-sidenav-container class&#x3D;&quot;sidenav-container&quot;&gt;
+  &lt;mat-sidenav 
+  #drawer 
+  class&#x3D;&quot;sidenav&quot; fixedInViewport&#x3D;&quot;true &quot;
+    [attr.role]&#x3D;&quot;(isHandset$ | async) ? &#x27;dialog&#x27; : &#x27;navigation&#x27;&quot; [mode]&#x3D;&quot;(isHandset$ | async) ? &#x27;over&#x27; : &#x27;side&#x27;&quot;
+    [opened]&#x3D;&quot;!(isHandset$ | async)&quot; *ngIf&#x3D;&quot;userIsAuthenticated&quot;&gt;
+    &lt;mat-toolbar style&#x3D;&quot;color: transparent&quot;&gt; Menu&lt;/mat-toolbar&gt;
+    &lt;mat-nav-list&gt;
+
+      &lt;a class&#x3D;&quot;list-item&quot; mat-button routerLink&#x3D;&quot;/events/user&quot; routerLinkActive&#x3D;&quot;primary&quot;&gt;
+        &lt;i id&#x3D;&quot;list-item-icon&quot; class&#x3D;&quot;material-icons&quot;&gt;event&lt;/i&gt;
+        Mine Events&lt;/a&gt;
+
+      &lt;a class&#x3D;&quot;list-item&quot; mat-button routerLinkActive&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onRequestedEvents()&quot;&gt;
+          &lt;i id&#x3D;&quot;list-item-icon&quot; class&#x3D;&quot;material-icons&quot;&gt;notification_important&lt;/i&gt;
+        Requested events&lt;/a&gt;
+    &lt;/mat-nav-list&gt;
+
+  &lt;/mat-sidenav&gt;
+
+  &lt;mat-sidenav-content&gt;
+
+    &lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
+
+        &lt;button  type&#x3D;&quot;button&quot; aria-label&#x3D;&quot;Toggle sidenav&quot; mat-icon-button (click)&#x3D;&quot;toggleSidenav()&quot;
+          *ngIf&#x3D;&quot; userIsAuthenticated &amp;&amp; isHandset$ | async&quot;&gt;
+          &lt;mat-icon aria-label&#x3D;&quot;Side nav toggle icon&quot;&gt;menu&lt;/mat-icon&gt;
+        &lt;/button&gt;
+
+
+      &lt;mat-toolbar-row&gt;
+        
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;span class&#x3D;&quot;events&quot;&gt;
+              &lt;button mat-button routerLink&#x3D;&quot;/allEvents&quot; routerLinkActive&#x3D;&quot;#A2F5DE&quot;&gt; Events&lt;/button&gt;
+            &lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class&#x3D;&quot;spacer&quot;&gt;&lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+
+              &lt;span&gt;
+                  &lt;button mat-button routerLink&#x3D;&quot;/create&quot; routerLinkActive&#x3D;&quot;#A2F5DE&quot;&gt; New Event&lt;/button&gt;
+                &lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul *ngIf&#x3D;&quot;!userIsAuthenticated&quot;&gt;
+          &lt;li&gt;
+
+              &lt;span&gt;
+                  &lt;button mat-button routerLink&#x3D;&quot;/login&quot; routerLinkActive&#x3D;&quot;#A2F5DE&quot;&gt; Log in&lt;/button&gt;
+                &lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul *ngIf&#x3D;&quot;userIsAuthenticated&quot;&gt;
+          &lt;li&gt;
+              &lt;div class&#x3D;&quot;col&quot;&gt;
+                  &lt;div ngbDropdown class&#x3D;&quot;d-inline-block&quot;&gt;
+                    &lt;button matButton class&#x3D;&quot;btn btn-outline-primary&quot; id&#x3D;&quot;dropdown&quot; ngbDropdownToggle&gt;
+                      &lt;i class&#x3D;&quot;material-icons&quot;&gt;settings&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;div class&#x3D;&quot;ngDropDown&quot; ngbDropdownMenu &gt;
+                      &lt;button matButton routerLink&#x3D;&quot;/signup&quot; ngbDropdownItem&gt;Opret Bruger&lt;/button&gt;
+                      &lt;button matButton ngbDropdownItem&gt; Ændre profil&lt;/button&gt;
+                      &lt;button matButton ngbDropdownItem routerLink&#x3D;&#x27;/changePassword&#x27;&gt; Skift adgangskode&lt;/button&gt;
+                      &lt;button *ngIf&#x3D;&quot;authService.isAdmin()&quot; routerLink&#x3D;&quot;/editUsers&quot; matButton ngbDropdownItem&gt; Opdater/slet brugere&lt;/button&gt;
+                      &lt;button matButton (click)&#x3D;&quot;onLogout()&quot; ngbDropdownItem&gt;Log Ud&lt;/button&gt;
+        
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+        
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+
+      &lt;/mat-toolbar-row&gt;
+    &lt;/mat-toolbar&gt;
+    &lt;main&gt;
+      &lt;router-outlet&gt;&lt;/router-outlet&gt;
+    &lt;/main&gt;
+  &lt;/mat-sidenav-content&gt;
+
+&lt;/mat-sidenav-container&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./app.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+mat-sidenav-container{
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(&quot;https://source.unsplash.com/1600x900/?denmark&quot;) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%; 
+}
+
+
+mat-sidenav-container{
+  background-color: rgba(0, 0, 0, 0.836)
+}
+.sidenav-container {
+    height: 100%;
+  }
+
+  mat-spinner{
+    margin: auto;
+  }
+
+mat-sidenav-content{
+  margin: auto;
+}
+  
+.sidenav {
+    width: 200px;
+    background:transparent;
+    color: white;
+    font-weight: 800;
+  }
+  
+  .sidenav .mat-toolbar {
+    background-color:transparent;
+    
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+    color: black;
+
+  }
+  
+mat-toolbar{
+  color: black;
+  background-color:transparent;
+ 
+}
+
+button:hover{
+  color: royalblue;
+ 
+ }
+
+ button {
+  color: white;
+  background: transparent; 
+  
+ }
+.spacer {
+  flex: 1 1 auto;
+}
+ .col{
+   padding: 0;
+   border: 0;
+ }
+ .dropdown-toggle::after {
+  display:none;
+}
+.events{
+  flex:1 1 auto;
+}
+#dropdown {
+  width: 70px;
+  height: 36px;
+  background:rgba(255,255,255,0.9);
+}
+
+ul{
+  text-decoration: none;
+  border-style: none; 
+  list-style: none;
+}
+
+#list-item-icon {
+margin-right: 0.4cm;
+
+}
+
+a:hover {
+  color:royalblue
+  }
+
+
+  #dropdown{
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+  }
+
+  #dropdown :hover{
+    color: royalblue;
+  }
+  .ngDropDown{
+    background-color: transparent;
+  }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-spinner *ngIf="isLoading"></mat-spinner><mat-sidenav-container class="sidenav-container">  <mat-sidenav   #drawer   class="sidenav" fixedInViewport="true "    [attr.role]="(isHandset$ | async) ? \'dialog\' : \'navigation\'" [mode]="(isHandset$ | async) ? \'over\' : \'side\'"    [opened]="!(isHandset$ | async)" *ngIf="userIsAuthenticated">    <mat-toolbar style="color: transparent"> Menu</mat-toolbar>    <mat-nav-list>      <a class="list-item" mat-button routerLink="/events/user" routerLinkActive="primary">        <i id="list-item-icon" class="material-icons">event</i>        Mine Events</a>      <a class="list-item" mat-button routerLinkActive="primary" (click)="onRequestedEvents()">          <i id="list-item-icon" class="material-icons">notification_important</i>        Requested events</a>    </mat-nav-list>  </mat-sidenav>  <mat-sidenav-content>    <mat-toolbar color="primary">        <button  type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSidenav()"          *ngIf=" userIsAuthenticated && isHandset$ | async">          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>        </button>      <mat-toolbar-row>                <ul>          <li>            <span class="events">              <button mat-button routerLink="/allEvents" routerLinkActive="#A2F5DE"> Events</button>            </span>          </li>        </ul>        <div class="spacer"></div>        <ul>          <li>              <span>                  <button mat-button routerLink="/create" routerLinkActive="#A2F5DE"> New Event</button>                </span>          </li>        </ul>        <ul *ngIf="!userIsAuthenticated">          <li>              <span>                  <button mat-button routerLink="/login" routerLinkActive="#A2F5DE"> Log in</button>                </span>          </li>        </ul>        <ul *ngIf="userIsAuthenticated">          <li>              <div class="col">                  <div ngbDropdown class="d-inline-block">                    <button matButton class="btn btn-outline-primary" id="dropdown" ngbDropdownToggle>                      <i class="material-icons">settings</i>                    </button>                    <div class="ngDropDown" ngbDropdownMenu >                      <button matButton routerLink="/signup" ngbDropdownItem>Opret Bruger</button>                      <button matButton ngbDropdownItem> Ændre profil</button>                      <button matButton ngbDropdownItem routerLink=\'/changePassword\'> Skift adgangskode</button>                      <button *ngIf="authService.isAdmin()" routerLink="/editUsers" matButton ngbDropdownItem> Opdater/slet brugere</button>                      <button matButton (click)="onLogout()" ngbDropdownItem>Log Ud</button>                            </div>                  </div>                </div>                  </li>        </ul>      </mat-toolbar-row>    </mat-toolbar>    <main>      <router-outlet></router-outlet>    </main>  </mat-sidenav-content></mat-sidenav-container></div>'
+    var COMPONENTS = [{'name': 'AddressFormComponent', 'selector': 'app-address-form'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ContactPersonFormComponent', 'selector': 'app-contact-person-form'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'EditUsersComponent', 'selector': 'app-edit-users'},{'name': 'EmailDialogComponent', 'selector': 'app-email-dialog'},{'name': 'EventDialogComponent', 'selector': 'app-event-dialog'},{'name': 'EventFormComponent', 'selector': 'app-event-form'},{'name': 'EventListComponent', 'selector': 'app-event-list'},{'name': 'EventListTableComponent', 'selector': 'app-event-list-table'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'StartSiteComponent', 'selector': 'app-start-site'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

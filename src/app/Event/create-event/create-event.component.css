@@ -1,0 +1,48 @@
+
+  mat-spinner{
+    margin: auto;
+  }
+
+  mat-tab-group{
+    margin: auto;
+    width: 80%;
+    background:rgba(255,255,255,0.9);
+  }
+
+  mat-tab{
+    background-color:rgba(255,255,255,0.9);
+  }
+
+  mat-tab-label{
+    font-weight: 900;
+    color: black;
+  }
+
+  .mat-icon-error {
+    color: red;
+  }
+
+  .mat-icon-correct {
+    color: green;
+  }
+
+  button{
+    background-color:rgb(173, 236, 255);
+    color: rgb(0, 0, 0); 
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    width: 80%;
+  }
+  
+  #errorMessage{
+    background-color: rgb(255, 153, 153);
+    color: rgb(255, 255, 255);  
+
+}
+
+#successMessage{
+    background-color: rgb(196, 255, 196);
+    color: white;
+
+}

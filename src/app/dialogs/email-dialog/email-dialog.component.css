@@ -1,0 +1,10 @@
+label{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+mat-input{
+    width: 100%;
+}
+mat-form-field{
+    width: 100%;
+}

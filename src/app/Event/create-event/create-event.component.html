@@ -1,0 +1,70 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<mat-tab-group [selectedIndex]="selectedTab">
+  <mat-tab #eventTab label="Event detaljer">
+
+
+    <ng-template mat-tab-label *ngIf="isEventFormValid">
+      <mat-icon class="mat-icon-correct">check</mat-icon>
+    </ng-template>
+
+    <ng-template matTabContent>
+
+      <app-event-form (statusEmitter) ="getEventFormStatus($event)" [mode]="mode">
+      </app-event-form>
+
+    </ng-template>
+
+  </mat-tab>
+
+
+  <mat-tab #addressTab label="Addresse Detaljer">
+
+    <ng-template mat-tab-label *ngIf="isAddressFormValid">
+      <mat-icon class="mat-icon-correct">check</mat-icon>
+    </ng-template>
+
+    <ng-template matTabContent>
+      <app-address-form (statusEmitter) ="getAddressFormStatus($event)" [mode]="mode"> </app-address-form>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab #contactTab label="Kontaktperson Detaljer">
+
+
+    <ng-template mat-tab-label *ngIf="isContactFormValid">
+      <mat-icon class="mat-icon-correct">check</mat-icon>
+    </ng-template>
+
+    <ng-template matTabContent>
+      <app-contact-person-form (statusEmitter)="getContactFormStatus($event)" [mode]="mode"></app-contact-person-form>
+    </ng-template>
+
+  </mat-tab>
+
+</mat-tab-group>
+
+
+<ng-container>
+</ng-container>
+
+
+  <button 
+  *ngIf="
+  isAddressFormValid && 
+  isEventFormValid && 
+  isContactFormValid"
+   #submitBtn mat-flat-button type="submit" (click)="saveEvent(submitBtn)"> Save Event</button>
+
+<ng-template #enableBtn>
+  <button #submitBtn mat-flat-button type="submit" (click)="saveEvent(submitBtn)"> Save Event</button>
+</ng-template>
+
+
+<ngb-alert id="SuccessMessage" *ngIf=" message && !message.isErrorMessage" #alert [dismissible]="false">
+  <strong>{{message.message}}</strong>
+</ngb-alert>
+
+<ngb-alert id="errorMessage" *ngIf=" message && message.isErrorMessage" #alert [dismissible]="false">
+  <strong>{{message.message}}</strong>
+</ngb-alert>

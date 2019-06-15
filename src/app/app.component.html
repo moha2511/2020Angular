@@ -1,0 +1,95 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+  #drawer 
+  class="sidenav" fixedInViewport="true "
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)" >
+    <mat-toolbar > <h3 routerLink="/">2020 </h3></mat-toolbar>
+    <mat-nav-list *ngIf="userIsAuthenticated">
+
+      <a class="list-item" mat-button routerLink="/events/user" routerLinkActive="primary">
+        <i id="list-item-icon" class="material-icons">event</i>
+        Mine Events</a>
+
+      <a class="list-item" mat-button routerLinkActive="primary" (click)="onRequestedEvents()">
+          <i id="list-item-icon" class="material-icons">notification_important</i>
+        Ny Arrangementer</a>
+
+        <a class="list-item" routerLink="/createNews" mat-button routerLinkActive="primary">
+            <i id="list-item-icon" class="material-icons">create </i>Opret Nyhed</a>
+          <a (click)="changeView()"  class="list-item" mat-button routerLinkActive="primary">
+              <i id="list-item-icon" class="material-icons">cached </i>{{ view}}</a>
+        
+ 
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+
+        <button  type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSidenav()"
+          *ngIf=" userIsAuthenticated && isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+
+
+      <mat-toolbar-row>
+        
+        <ul>
+          <li>
+            <span class="events">
+              <button mat-button routerLink="/allEvents" routerLinkActive="#A2F5DE"> Arrangmenter</button>
+            </span>
+          </li>
+        </ul>
+        <div class="spacer"></div>
+        <ul>
+          <li>
+
+              <span>
+                  <button mat-button routerLink="/create" routerLinkActive="#A2F5DE"> Opret Arrangement</button>
+                </span>
+          </li>
+        </ul>
+
+        <ul *ngIf="!userIsAuthenticated">
+          <li>
+
+              <span>
+                  <button mat-button routerLink="/login" routerLinkActive="#A2F5DE"> Log ind</button>
+                </span>
+          </li>
+        </ul>
+
+        <ul *ngIf="userIsAuthenticated">
+          <li>
+              <div class="col">
+                  <div ngbDropdown class="d-inline-block">
+                    <button matButton class="btn btn-outline-primary" id="dropdown" ngbDropdownToggle>
+                      <i class="material-icons">settings</i>
+                    </button>
+                    <div class="ngDropDown" ngbDropdownMenu >
+                      <button matButton routerLink="/signup" ngbDropdownItem>Opret Bruger</button>
+                      <button matButton ngbDropdownItem routerLink='/changePassword'> Skift adgangskode</button>
+                      <button *ngIf="authService.isAdmin()" routerLink="/editUsers" matButton ngbDropdownItem> Rediger brugere</button>
+                      <button matButton (click)="onLogout()" ngbDropdownItem>Log Ud</button>
+        
+                    </div>
+                  </div>
+                </div>
+        
+          </li>
+        </ul>
+
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

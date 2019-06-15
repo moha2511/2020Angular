@@ -1,0 +1,51 @@
+<mat-card>
+
+<form [formGroup] ="contactForm">
+
+  <mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="contactForm.get('nameForm')" errorMessage="Skriv venligst Kontakt personens navn">
+    <form [formGroup]="contactForm.get('nameForm')">
+      <ng-template matStepLabel> Fornavn/Efternavn </ng-template>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Navn" formControlName="contactNameCtrl" required>
+        <mat-error *ngIf="contactForm.get('nameForm').get('contactNameCtrl').hasError('max')"> Navnet er for langt</mat-error>
+      </mat-form-field>
+      <div>
+       
+        <button mat-button matStepperNext>Næste</button>
+        </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="this.contactForm.get('emailForm')" errorMessage="Udfyld venligst Kontakt personens E-mail">
+    <form [formGroup]="this.contactForm.get('emailForm')">
+      <ng-template matStepLabel> E-mail </ng-template>
+      <mat-form-field>
+        <input matInput type="email" placeholder="E-mail" formControlName="contactEmailCtrl" required>
+        <mat-error *ngIf="contactForm.get('emailForm').get('contactEmailCtrl').hasError('max')"> Emailen er for lang</mat-error>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Tilbage</button>
+        <button mat-button matStepperNext>Næste</button>
+        </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="this.contactForm.get('phoneForm')" errorMessage="Udfyld venligst Kontakt personens telefon nummer">
+    <form [formGroup]="this.contactForm.get('phoneForm')">
+      <ng-template matStepLabel> Telefon/Mobil nummer</ng-template>
+      <mat-form-field>
+          <input matInput type="text" placeholder="Telefon/mobil nummer" formControlName="contactPhoneCtrl" required>
+          <mat-error *ngIf="contactForm.get('phoneForm').get('contactPhoneCtrl').hasError('max')"> Nummeret er for langt</mat-error>
+          <mat-error *ngIf="contactForm.get('phoneForm').get('contactPhoneCtrl').hasError('min')"> Nummeret er for kort</mat-error>
+        </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Tilbage</button>
+        </div>
+    </form>
+  </mat-step>
+
+</mat-horizontal-stepper>
+</form>
+
+</mat-card>

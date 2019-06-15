@@ -1,0 +1,20 @@
+
+<form [formGroup]="emailFormGroup"class="section" >
+  <h3> Afmeld dig vores nyhedsbrev</h3>
+  
+  <input #emailInput placeholder="E-Mail" formControlName="emailCtrl">
+  <div>
+  <mat-error *ngIf=" isSubmitted && emailFormGroup.get('emailCtrl').hasError('required')">Skriv din email for at afmelde dig nyhedsbrevet </mat-error>
+  <mat-error *ngIf=" isSubmitted && emailFormGroup.get('emailCtrl').hasError('email')">Ugyldig E-mail </mat-error>
+  <div>
+    <button (click)="onUnsubscribe(emailInput)" type="button" mat-button> Afmeld</button>
+    </div>
+  </div>
+  <ngb-alert id="SuccessMessage" *ngIf=" message && !message.isErrorMessage" #alert [dismissible]="false">
+    <strong>{{message.message}}</strong>
+  </ngb-alert>
+  
+  <ngb-alert id="errorMessage" *ngIf=" message && message.isErrorMessage" #alert [dismissible]="false">
+    <strong>{{message.message}}</strong>
+  </ngb-alert>
+  </form>

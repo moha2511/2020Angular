@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+mat-input {
+  color:white;
+}
+
+input{
+  width: 50%;
+  border-color: white; 
+  color:white;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  
+}
+#firstSection{
+  margin-top: 11rem;
+}
+
+mat-form-field{
+  margin: auto;
+  width: 80%;
+  color:white;
+  text-align: center;
+}
+
+
+.section {
+  color: white;
+  text-align: center;
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 30rem;
+}
+
+p {
+  font-style: normal;
+  font-family: "Courier New", Courier, monospac;
+  font-size: 20px;
+  color: white;
+}
+h3 {
+  font-style: normal;
+  font-family: "Courier New", Courier, monospac;
+}
+
+h1 {
+  font-style: italic;
+  font-family: "Courier New", Courier, monospac;
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+  align-content: center;
+  margin: auto;
+  margin-right: 2rem;
+}
+li:hover{
+    color:royalblue;
+}
+
+button , a {
+  font-size: 18px;
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  font-style: normal;
+  font-family: "Courier New", Courier, monospac;
+}
+
+button:hover {
+  color: royalblue;
+}
+a:hover{
+    color: royalblue;
+    text-decoration: none;
+}
+
+#errorMessage{
+  background-color: rgb(255, 153, 153);
+  color: rgb(255, 255, 255);  
+
+}
+
+#successMessage{
+  background-color: rgb(196, 255, 196);
+  color: white;
+
+}

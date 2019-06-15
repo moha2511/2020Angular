@@ -1,0 +1,62 @@
+
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-card>
+
+    <form [formGroup] ="loginForm">
+    
+      <mat-horizontal-stepper linear #stepper>
+      <mat-step [stepControl]="fgEmail" errorMessage="Skriv din login E-mail">
+        <form [formGroup]="fgEmail">
+          <ng-template matStepLabel> E-mail </ng-template>
+          <mat-form-field>
+            <input matInput type="email" placeholder=" E-mail" formControlName="emailCtrl" required>
+            <mat-error allign="end" *ngIf="fgEmail.get('emailCtrl').hasError('required')">
+                Udfyld E-mail feltet for at logge ind
+              </mat-error>
+              <mat-error allign="end" *ngIf="fgEmail.get('emailCtrl').hasError('email')">
+                  Din email skal være oprindelig
+                </mat-error>
+          </mat-form-field>
+          <div>
+           
+            <button mat-button matStepperNext>Næste</button>
+            </div>
+        </form>
+      </mat-step>
+    
+      <mat-step [stepControl]="fgPassword" errorMessage="Skriv din adgangskode!">
+        <form [formGroup]="fgPassword">
+          <ng-template matStepLabel> Adgangskode </ng-template>
+          <mat-form-field>
+            <input 
+            matInput
+             type="password"
+              placeholder="Adgangskode"
+               formControlName="passwordCtrl"
+               placeholder="Adgangskode"
+                required>
+
+                <mat-error allign="end" *ngIf="fgPassword.get('passwordCtrl').hasError('required')">
+                    Udfyld adgangskoden feltet for at logge ind
+                  </mat-error>
+          </mat-form-field>
+ 
+        </form>
+      </mat-step>
+    
+    </mat-horizontal-stepper>
+    </form>
+    
+    
+    <div class="form-group">
+        <button mat-raised-button color="primary" (click)="onLogin()">Log in</button>
+      </div>
+    </mat-card>
+
+      
+    <ngb-alert id="errorMessage"  *ngIf=" errorData" #alert [dismissible]="false">
+      <strong>{{errorData.message}}</strong> 
+    </ngb-alert>
+
+

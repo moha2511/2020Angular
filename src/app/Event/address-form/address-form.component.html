@@ -1,0 +1,51 @@
+
+
+     <mat-card>
+     <form [formGroup]="addressForm">
+        <mat-horizontal-stepper linear #stepper>
+
+          <mat-step [stepControl]="addressForm.get('lineForm')" errorMessage="Addressen skal udfyldes!">
+            <form [formGroup]="addressForm.get('lineForm')">
+              <ng-template matStepLabel> Addresse </ng-template>
+              <mat-form-field>
+                <input matInput  placeholder=" Event Adresse" formControlName="lineCtrl" required>
+                <mat-error *ngIf="addressForm.get('lineForm').get('lineCtrl').hasError('maxlength')">Addressen er for lang</mat-error>
+              </mat-form-field>
+              <div>
+            
+                <button mat-button matStepperNext>Næste</button>
+                </div>
+            </form>
+          </mat-step>
+  
+          <mat-step [stepControl]="addressForm.get('cityForm')" errorMessage="By skal udfyldes!">
+            <form [formGroup]="addressForm.get('cityForm')">
+              <ng-template matStepLabel> By </ng-template>
+              <mat-form-field>
+                  <input matInput type="text" placeholder="By" formControlName="cityCtrl" required>
+                  <mat-error *ngIf="addressForm.get('cityForm').get('cityCtrl').hasError('maxlength')">By navnet er for langt</mat-error>
+                </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Tilbage</button>
+                <button mat-button matStepperNext>Næste</button>
+                </div>
+            </form>
+          </mat-step>
+  
+          <mat-step [stepControl]="addressForm.get('zipCodeForm')" errorMessage="Post nummer skal udfyldes!">
+            <form [formGroup]="addressForm.get('zipCodeForm')">
+              <ng-template matStepLabel> Postnummer</ng-template>
+              <mat-form-field>
+                <input matInput type="number" placeholder="Postnummer" formControlName="zipCodeCtrl" required>
+                <mat-error *ngIf="addressForm.get('zipCodeForm').get('zipCodeCtrl').hasError('max')">Det kan kun være 4 cifret</mat-error>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Tilbage</button>
+                <button mat-button matStepperNext>Næste</button>
+                </div>
+            </form>
+          </mat-step>
+        </mat-horizontal-stepper>
+     
+      </form>
+    </mat-card>

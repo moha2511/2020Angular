@@ -1,0 +1,72 @@
+<p style="color: rgb(0, 196, 0)" *ngIf="message && message.isErrorMessage === false">{{message.message}} tjek din mail</p>
+<p style="color: red" *ngIf="message && message.isErrorMessage === true">{{message.message}}</p>
+
+<h1 mat-dialog-title> {{data.name}}</h1>
+
+
+<div mat-dialog-content *ngIf="!isAttendMode">
+    <ul>
+        <li>
+            <div>
+                <label class="label"> Eventen Starter den: </label>
+                <label class="data"> {{data.startTime}}</label>
+            </div>
+
+        </li>
+        <li>
+            <div>
+                <label class="label"> Eventen Slutter den: </label>
+                <label class="data"> {{data.endTime}}</label>
+            </div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <div>
+                <label class="label"> Adressen:</label>
+                <label class="data"> {{data.line}}</label>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <label class="label"> By:</label>
+                <label class="data"> {{data.city}}</label>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <label class="label"> Post nummer: </label>
+                <label class="data"> {{data.zipCode}}</label>
+            </div>
+        </li>
+
+        <li>
+                <div>
+                    <label class="label"> Minmun alderen:</label>
+                    <label class="data" *ngIf="data.ageLimit === 0"> Alle aldre er velkommen</label>
+                    <label class="data" *ngIf="data.ageLimit > 0"> {{data.ageLimit}}</label>
+                </div>
+            </li>
+    </ul>
+</div>
+<div mat-dialog-content *ngIf="isAttendMode" >
+    <form  [formGroup]="attendForm">
+        <mat-form-field>
+        <input matInput #emailInput  formControlName="emailCtrl" placeholder="E-Mail">
+        <mat-error *ngIf="attendForm.get('emailCtrl').hasError('required')"> Skriv din E-Mail for at tilmelde dig</mat-error>
+        <mat-error *ngIf="attendForm.get('emailCtrl').hasError('email')"> Ugyldig E-Mail</mat-error> 
+    </mat-form-field>
+    
+        <button (click)="onSendingMail(emailInput)" type="button" mat-button> Tilmeld  </button>
+        </form>        
+    </div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onClose()">Close</button>
+    <button *ngIf="!isAttendMode" mat-button (click)="onAttend()"> Attend</button>
+</div>
+
+

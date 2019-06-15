@@ -1,0 +1,157 @@
+<mat-card>
+  <mat-horizontal-stepper  #stepper>
+
+    <mat-step [stepControl]="eventForm.get('nameForm')" errorMessage="Udfyld venligst navnet for eventen." completed>
+      <form [formGroup]="eventForm.get('nameForm')">
+        <ng-template matStepLabel> Event navn </ng-template>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Navn" formControlName="nameCtrl" required>
+          <mat-error *ngIf="eventForm.get('nameForm').get('nameCtrl').hasError('maxlength')"> Navnet er for langt</mat-error>
+        </mat-form-field>
+        <div>
+
+          <button mat-button matStepperNext>Næste</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="eventForm.get('descForm')" errorMessage="Udfyld venligst beskrivelsen for eventen.">
+      <form [formGroup]="eventForm.get('descForm')">
+        <ng-template matStepLabel> Beskrivelse </ng-template>
+        <mat-form-field>
+          <textarea  matInput placeholder="Beskrivelse" formControlName="descCtrl" required></textarea>
+          <mat-error *ngIf="eventForm.get('descForm').get('descCtrl').hasError('maxlength')"> Beskrivelsen er for lang</mat-error>
+        </mat-form-field>
+
+        <div>
+          <button mat-button matStepperPrevious>Tilbage</button>
+          <button mat-button matStepperNext>Næste</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="eventForm.get('themeForm')" errorMessage="Udfyld venligst tema for eventen.">
+      <form [formGroup]="eventForm.get('themeForm')">
+        <ng-template matStepLabel> Kategori </ng-template>
+        <mat-form-field>
+          <mat-select placeholder="Kategori" formControlName="themeCtrl" required>
+            <mat-option *ngFor="let category of categories" [value]="category.value">
+              {{category.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Tilbage</button>
+          <button mat-button matStepperNext>Næste</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="eventForm.get('costForm')" errorMessage="Udfyld venligst en pris for eventen.">
+      <form [formGroup]="eventForm.get('costForm')">
+        <ng-template matStepLabel> Pris</ng-template>
+        
+        <mat-form-field>
+            <input type="number" matInput placeholder="Pris" formControlName="costCtrl" required>
+            <mat-error *ngIf="eventForm.get('costForm').get('costCtrl').hasError('max')"> Prisen er for høj</mat-error>
+          </mat-form-field>
+        <div>        
+          <button mat-button matStepperPrevious>Tilbage</button>
+        </div>
+      </form>
+    </mat-step>
+
+  </mat-horizontal-stepper>
+
+
+  <mat-horizontal-stepper  #stepper2>
+
+    <mat-step [stepControl]="eventForm.get('startTimeForm')" errorMessage="Udfyld venligst start tiden korrekt." >
+      <form [formGroup]="eventForm.get('startTimeForm')">
+        <ng-template matStepLabel>Start Tid</ng-template>
+
+        <mat-form-field>
+
+          <input type="datetime"
+           matInput
+           formControlName="startTimeCtrl"
+           [owlDateTime]="startTime"
+            [owlDateTimeTrigger]="startTime"
+             placeholder="Start Tid"
+             [min]="minDate">
+       
+             <owl-date-time 
+             #startTime
+           ></owl-date-time>
+       
+        </mat-form-field>
+
+        <div>
+          <button mat-button matStepperNext>Næste</button>
+        </div>
+
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="eventForm.get('endTimeForm')" errorMessage="Udfyld venligst slut tiden korrekt.">
+      <form [formGroup]="eventForm.get('endTimeForm')">
+          <mat-form-field>
+        <ng-template matStepLabel>Slut Tid</ng-template>
+      
+          <input  type="datetime"
+          required
+           matInput
+            formControlName="endTimeCtrl"
+            [owlDateTime]="endTime"
+            [owlDateTimeTrigger]="endTime"
+            placeholder="End Time" 
+            [min]="maxDate">
+
+            <owl-date-time 
+          #endTime>
+        </owl-date-time>
+
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Tilbage</button>
+          <button mat-button matStepperNext>Næste</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="eventForm.get('ageLimitForm')" errorMessage="Udfyld venligst aldersgrænsen for eventen.">
+      <form [formGroup]="eventForm.get('ageLimitForm')">
+        <mat-form-field>
+          <ng-template matStepLabel> Aldersgrænse</ng-template>
+          <input matInput type="number" placeholder="Vælg aldersgrænse" formControlName="ageLimitCtrl" required>
+          <mat-error *ngIf="eventForm.get('ageLimitForm').get('ageLimitCtrl').hasError('max')"> vælg en alder mellem 1-120</mat-error>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Tilbage</button>
+          <button mat-button matStepperNext>Næste</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="eventForm.get('imageForm')" errorMessage="Vælg venligst et billede for eventen">
+      <form [formGroup]="eventForm.get('imageForm')">
+
+        <ng-template matStepLabel> Billede</ng-template>
+
+        <div>
+          <input type="file" accept="image/*"  #filePicker (change)="onImagePicked($event)">
+        </div>
+
+        <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+          <img [src]="imagePreview" [alt]="eventForm.get('nameForm').get('nameCtrl').value">
+        </div>
+
+        <div>
+          <button mat-button matStepperPrevious>Tilbage</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+</mat-card>

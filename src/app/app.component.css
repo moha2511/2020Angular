@@ -1,0 +1,115 @@
+
+mat-sidenav-container{
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("https://source.unsplash.com/1600x900/?denmark") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%; 
+}
+
+
+mat-sidenav-container{
+  background-color: rgba(0, 0, 0, 0.836)
+}
+.sidenav-container {
+    height: 100%;
+  }
+
+  mat-spinner{
+    margin: auto;
+  }
+
+mat-sidenav-content{
+  margin: auto;
+}
+  
+.sidenav {
+    width: 200px;
+    background:transparent;
+    color: white;
+    font-weight: 800;
+  }
+  
+  .sidenav .mat-toolbar {
+    background-color:transparent;
+    
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+
+  }
+  
+mat-toolbar{
+  color: black;
+  background-color:transparent;
+ 
+}
+
+button:hover{
+  color: royalblue;
+ 
+ }
+
+ button {
+  color: white;
+  background: transparent; 
+  
+ }
+.spacer {
+  flex: 1 1 auto;
+}
+ .col{
+   padding: 0;
+   border: 0;
+ }
+ .dropdown-toggle::after {
+  display:none;
+}
+.events{
+  flex:1 1 auto;
+}
+#dropdown {
+  width: 70px;
+  height: 36px;
+  background:rgba(255,255,255,0.9);
+}
+
+ul{
+  text-decoration: none;
+  border-style: none; 
+  list-style: none;
+}
+
+#list-item-icon {
+margin-right: 0.2cm;
+
+}
+
+a:hover {
+  color:royalblue
+  }
+
+
+  #dropdown{
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+  }
+
+  #dropdown :hover{
+    color: royalblue;
+  }
+  .ngDropDown{
+    background-color: transparent;
+  }
+
+  h3{
+    color: white; 
+    font-size: 40px; 
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+  }

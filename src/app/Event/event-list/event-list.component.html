@@ -1,0 +1,72 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<dialog matDialog></dialog>
+
+
+
+<div>
+  <div *ngFor="let eventData of events; let i=index">
+  
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-avatar src="https://source.unsplash.com/random/200x200">
+        <mat-card-title>{{eventData.event.name}}</mat-card-title>
+        <mat-card-subtitle>
+          <div #test>
+          {{eventData.formattedStartTime}}
+          <span class="spacer"></span>
+          <label id="cost">  Pris:   {{eventData.event.cost}}.- </label>
+        </div>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <img class="event-image" mat-card-image [src]="eventData.event.imagePath" [alt]="eventData.event.name">
+
+      <mat-card-content #matCard [id]="i">
+
+
+        <mat-accordion>
+          <mat-expansion-panel #example class="mat-elevation-z0">
+
+            <mat-expansion-panel-header>
+              <h6> {{eventData.event.theme}} </h6>
+            </mat-expansion-panel-header>
+
+            <p class="description" style="overflow-y: scroll;">
+              {{eventData.event.description}}
+            </p>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </mat-card-content>
+      <mat-card-actions allign="end" *ngIf="isUserAuthenticated && userId === eventData.event.creator">
+        <button mat-button [routerLink]="['/edit', eventData.event._id] ">Opdater</button>
+        <button mat-button (click)="onDelete(eventData.event._id)">Slet</button>
+        <button mat-button (click)="onReadMore(eventData.event)">Se Mere</button>
+      </mat-card-actions>
+
+      <mat-card-actions *ngIf="isUserAuthenticated && eventData.event.creator == 'arranger'">
+        <button mat-button [routerLink]="['']" (click)="onPublish(eventData.event)">Publish</button>
+        <button mat-button (click)="onDecline(eventData.event)">Decline</button>
+        <button mat-button (click)="onReadMore(eventData.event)">Se Mere</button>
+      </mat-card-actions>
+
+      <mat-card-actions *ngIf="!isUserAuthenticated">
+        <button mat-button (click)="onLike(eventData.event._id)">
+          <i class="material-icons">thumb_up</i>
+        </button>
+        <button mat-button (click)="onShare(eventData.event._id)">
+          <i class="material-icons">share </i>
+        </button>
+      </mat-card-actions>
+
+    </mat-card>
+
+    <span class="spacer"></span>
+  </div>
+  <button *ngIf="endAmount <=  events.length" (click)="showMoreEvents()" id="endButton" mat-button> Vis flere </button>
+</div>
+<p 
+style="color: white; font-weight:bold; font-size: 30px; margin: auto; width: 50%" 
+class="info-text mat-body-1" 
+*ngIf="events.length <= 0 && !isLoading"> Ingen Arragementer at vise 😩😩</p>
